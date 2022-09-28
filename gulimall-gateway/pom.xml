@@ -9,39 +9,33 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.atguigu.gulimall</groupId>
-    <artifactId>gulimall-member</artifactId>
+    <artifactId>gulimall-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gulimall-member</name>
-    <description>用户服务</description>
+    <name>gulimall-gateway</name>
+    <description>API网关</description>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2021.0.4</spring-cloud.version>
     </properties>
     <dependencies>
+
         <dependency>
             <groupId>com.atguigu.gulimall</groupId>
             <artifactId>gulimall-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.atguigu.gulimall</groupId>
-            <artifactId>gulimall-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>

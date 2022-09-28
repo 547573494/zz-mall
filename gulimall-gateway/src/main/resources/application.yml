@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 路由 ID，不同的 id 有不同的功能
+        - id: activity-route
+          #  要使用nacos服务注册中心的服务：lb://{注册的服务名}
+          uri: http://www.qq.com
+          # 路由断言Factories
+          predicates:
+            - Query=url,qq
+
+
+        - id: test_qq
+          uri: http://www.qq.com
+          predicates:
+            - Query=url,qq
+
