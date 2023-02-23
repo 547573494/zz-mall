@@ -78,6 +78,7 @@ public class GrowthChangeHistoryController {
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] ids){
 		growthChangeHistoryService.removeByIds(Arrays.asList(ids));
+        
 
         return R.ok();
     }
